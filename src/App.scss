@@ -1,0 +1,115 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+//added css
+
+$main-bg: #1C3FAA;
+$main-gradient: linear-gradient(180deg, rgba(29,13,245,1) 0%, rgba(15,7,123,1) 100%);
+$dash-gradient: linear-gradient(48deg, rgba(28,63,170,1) 0%, rgba(28,62,168,1) 59%, rgba(14,32,85,1) 100%);
+
+$text-color: #1C3FAA;
+$box-shadow-input: 0px 6px 20px 0px rgba(28,63,170,0.4);
+$box-shadow-input-low: 0px 6px 20px 0px rgba(28,63,170,0.1);
+$box-shadow-card: 0px 18px 32px 0px rgba(76,147,255,0.38);
+$title-font: 10px * 3; 
+$box-shadow-btn: 0px 5px 30px 0px rgba(0,0,0,0.15);
+$bg-img: './assets/image/images.jpeg';
+
+
+.authContainer{
+  width: 100%;
+  background-size: cover;
+}
+@mixin formContainer($size, $color, $pad, $margin, $border  ) {
+  width: $size;
+  background-color: $color;
+  padding: $pad;
+  margin-top: $margin;
+  border-radius: $border;
+}
+
+.formContainer-1{
+  @include formContainer(450px, transparent, 20px, 140px, 20px )
+}
+.title-text{
+  font-size: $title-font;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-action {
+  background: $main-gradient;
+  font-weight: bold;
+  box-shadow: $box-shadow-btn;
+  border: none;
+}
+
+
+*{
+ box-sizing: border - box;
+}
+
+body {
+ color: #333;
+font-size: 13px;
+margin: 0;
+width: 100%;
+height: 100vh;
+-webkit-font-smoothing: antialiased;
+}
+h3 {
+font-family: 'Abril Fatface';
+margin-bottom: 20px;
+}
+button {
+border: none;
+width: 100%;
+margin: auto;
+margin-top: 40px;
+cursor: pointer;
+padding: 10px 0;
+background: #1B47DB;
+ font-size: 14px;
+ color: #fff;
+ border-radius: 4 px;
+ box-shadow: 0 4 px 8 px 0#CFDFFF,
+ 0 6 px 20 px 0#CFDFFF;
+ font-weight: 700;
+ transform: perspective(1 px) translateZ(0);
+}
