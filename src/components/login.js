@@ -2,12 +2,10 @@
 import React  from 'react';
 import { AuthContext } from '../context/authcontext';
 
-
 export const Login = () => {
     const {login} = React.useContext(AuthContext)
     const [username, setUsername] = React.useState('')
     const [isSubmitting, setIsSubmitting] = React.useState(false)
-
 
     const formsubmit = async (e) =>{
         e.preventDefault()
@@ -19,8 +17,7 @@ export const Login = () => {
         }
     }
 
-
-	return(
+    return(
         <div className="authContainer">
            
             <div className='container'>
@@ -62,10 +59,6 @@ export const Login = () => {
             <div className='col-md-4'></div>
             </div>
 
-
         </div>
 )
-	}
-   
-       
-
+    } 

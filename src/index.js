@@ -10,6 +10,7 @@ import {BrowserRouter} from 'react-router-dom'
 var appID = "22121a4ddaeaf0f";
 var region = "us";
 
+
 var appSetting = new CometChat.AppSettingsBuilder().subscribePresenceForAllUsers().setRegion(region).build();
 CometChat.init(appID, appSetting).then(() => {
 
@@ -25,7 +26,6 @@ CometChat.init(appID, appSetting).then(() => {
   },
   error => {
     console.log("Initialization failed with error:", error);
-    // Check the reason for error and take appropriate action.
   }
 );
 
