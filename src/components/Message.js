@@ -10,7 +10,7 @@ export const  Message = () => {
 
     return(
       <div>
-          <button onClick={logout}>logout</button>
+          <button className= "button" onClick={logout}>logout</button>
             <CometChatGroupListScreen/>
       </div>
       
