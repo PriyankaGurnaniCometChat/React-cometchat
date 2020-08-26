@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.scss';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
 import { Message } from './components/Message';
 import { Login } from './components/login';
 import {ProtectedRoute} from './constant/ProtectedRoute'
@@ -13,7 +12,7 @@ function App() {
       <AuthProvider>
        <Switch>
         <Route path='/' exact component={Login}/> 
-        <ProtectedRoute path='/message' component={Message}/>
+        <ProtectedRoute path='/message' isPrivate component={Message}/>
       </Switch>
       </AuthProvider>
     </BrowserRouter>
